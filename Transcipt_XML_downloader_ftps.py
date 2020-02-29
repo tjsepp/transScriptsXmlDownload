@@ -20,10 +20,11 @@ class XMLDownloader(object):
     def downloadXmlTranscripts(self):
         ftp = FTP_TLS()
         ftp.debugging = 2
-        ftp.connect(self.ftp_server,21)
+        ftp.connect(self.ftp_server,990)
+        print ftp
         ftp.login(self.ftp_user,self.ftp_pass)
         print(ftp)
 
 if __name__ == "__main__":
-    z = XMLDownloader(ftp_server='ftp server', ftp_user='ftp user', ftp_pass='ftp pass', download_path='download path',verbose=False)
+     z = XMLDownloader(ftp_server='ftp server',ftp_user='ftp user',ftp_pass='ftp pass',download_path='download path',verbose=False)
     z.downloadXmlTranscripts()

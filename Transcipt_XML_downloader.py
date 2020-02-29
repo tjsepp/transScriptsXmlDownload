@@ -1,7 +1,5 @@
 import pysftp
 import os
-from settings import *
-
 
 class XMLDownloader(object):
     '''
